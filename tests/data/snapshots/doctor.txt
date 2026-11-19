@@ -1,0 +1,16 @@
+Check               Result   Details                                                 
+─────────────────────────────────────────────────────────────────────────────────────
+macOS               ✓ OK     26.1                                                    
+Config              ✓ OK     ~/.config/mirrormax/config.toml                         
+displayplacer       ✓ OK     /opt/homebrew/bin/displayplacer · 2 display(s) connected
+Layout `normal`     ✓ OK     all displays connected                                  
+Launch agent        ⚠ Warn   not installed                                           
+Legacy vnc-mirror   ⚠ Warn   legacy agent loaded: mirrormax is in shadow mode        
+
+How to fix
+⚠ Launch agent           
+  mirrormax agent install
+⚠ Legacy vnc-mirror      
+  mirrormax migrate      
+
+4 passed · 2 warnings · 0 errors

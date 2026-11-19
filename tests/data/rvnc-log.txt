@@ -1,0 +1,60 @@
+<14> 2026-11-19T18:28:56.484Z maxbook rvncserver[581]: SConnection: Authentication successful
+<14> 2026-11-19T18:28:56.484Z maxbook rvncserver[581]: SProtoV5Up: Offering empty auth list (auth completed)
+<13> 2026-11-19T18:28:56.484Z maxbook rvncserver[581]: Connections: authenticated: user@example.com (from 192.0.2.10::60909), as user@example.com (d permissions)
+<14> 2026-11-19T18:28:56.485Z maxbook rvncserver[581]: SConn: Pixel buffer 1920x1912 at -359,-1080 depth 24
+<14> 2026-11-19T18:28:56.490Z maxbook rvncserver[581]: SConn: Server default pixel format depth 24 (32 bpp) little-endian rgb888
+<14> 2026-11-19T18:28:56.491Z maxbook rvncserver[581]: SServerRfb: Peer user agent com.realvnc.viewer.ios/4.9.6.60431 (iPad; CPU iPhone OS 27.2.1 like Mac OS X; en_US)
+<14> 2026-11-19T18:28:56.491Z maxbook rvncserver[581]: RtpPeerConnection: Received SDP media stream Offer
+<14> 2026-11-19T18:28:56.491Z maxbook rvncserver[581]: SProtoV6: Remote offer received for video media stream
+<14> 2026-11-19T18:28:56.491Z maxbook rvncserver[581]: VideoEncoderRfb: Encodings ZRLE2(24) ZRLE(16) JRLE(22) JPEG(21) TRLE(15) Zlib(6) Hextile(5) RRE(2) Raw(0) CopyRect(1)
+<14> 2026-11-19T18:28:56.491Z maxbook rvncserver[581]: VideoEncoderRfb: Current encoding ZRLE2
+<14> 2026-11-19T18:28:56.491Z maxbook rvncserver[581]: SConn: Client pixel format depth 6 (8 bpp) rgb222
+<14> 2026-11-19T18:28:56.502Z maxbook rvncserver[581]: RtpPeerConnection: Sending SDP media stream Answer
+<14> 2026-11-19T18:28:56.556Z maxbook rvncserver[581]: RtpPeerConnection: Received SDP media stream Offer
+<14> 2026-11-19T18:28:56.556Z maxbook rvncserver[581]: SProtoV6: Remote offer received for video media stream
+<14> 2026-11-19T18:28:56.556Z maxbook rvncserver[581]: VideoEncoderRfb: Encodings JRLE(22) ZRLE2(24) ZRLE(16) JPEG(21) TRLE(15) Zlib(6) Hextile(5) RRE(2) Raw(0) CopyRect(1)
+<14> 2026-11-19T18:28:56.556Z maxbook rvncserver[581]: VideoEncoderRfb: Current encoding JRLE
+<14> 2026-11-19T18:28:56.556Z maxbook rvncserver[581]: SConn: Client pixel format depth 24 (32 bpp) little-endian rgb888
+<14> 2026-11-19T18:28:56.556Z maxbook rvncserver[581]: RtpPeerConnection: Sending SDP media stream Answer
+<14> 2026-11-19T18:28:56.704Z maxbook rvncserver[581]: Agent: SServerAgent: Starting desktop
+<14> 2026-11-19T18:28:56.704Z maxbook rvncserver[581]: Agent: SServerAgent: setPixelBuffer 1920x1912 at -359,-1080 pf depth 24 (32 bpp) little-endian rgb888
+<14> 2026-11-19T18:28:56.767Z maxbook rvncserver[581]: RtpPeerConnection: Received SDP media stream Offer
+<14> 2026-11-19T18:28:56.767Z maxbook rvncserver[581]: SProtoV6: Remote offer received for video media stream
+<14> 2026-11-19T18:28:56.767Z maxbook rvncserver[581]: VideoEncoderRfb: Encodings ZRLE2(24) ZRLE(16) TRLE(15) Hextile(5) JRLE(22) JPEG(21) Zlib(6) RRE(2) Raw(0) CopyRect(1)
+<14> 2026-11-19T18:28:56.767Z maxbook rvncserver[581]: VideoEncoderRfb: Current encoding ZRLE2
+<14> 2026-11-19T18:28:56.767Z maxbook rvncserver[581]: RtpPeerConnection: Sending SDP media stream Answer
+<13> 2026-11-19T18:30:58.383Z maxbook rvncserver[581]: Connections: disconnected: user@example.com (from 192.0.2.10::60909) ([ViewerClosed] VNC Viewer closed)
+<14> 2026-11-19T18:30:58.412Z maxbook rvncserver[581]: Agent: SServerAgent: Stopping desktop
+<13> 2026-11-19T18:31:03.335Z maxbook rvncserver[581]: HostedRendezvous: Connection to [XXXXXX-XXXXX-XXXXXX] is from user@example.com
+<13> 2026-11-19T18:31:03.335Z maxbook rvncserver[581]: Connections: connected: user@example.com (from 192.0.2.10::50160)
+<14> 2026-11-19T18:31:03.341Z maxbook rvncserver[581]: SConnection: Client needs protocol version 6.0
+<14> 2026-11-19T18:31:03.341Z maxbook rvncserver[581]: SProtoV5Up: Choosing cipher suite RA4-PSK_128 [0x0602] (algorithms: RSA-OAEP, ECDHE-Curve25519, PSK, SHA-256, AES-GCM-128)
+<14> 2026-11-19T18:31:03.369Z maxbook rvncserver[581]: SAuthProtoImpl: Offering auth method UserPasswd(1) [required=1]
+<14> 2026-11-19T18:31:03.373Z maxbook rvncserver[581]: SAuthProtoImpl: Client chose auth method UserPasswd(1)
+<14> 2026-11-19T18:31:03.410Z maxbook rvncserver[581]: SConnection: Authentication successful
+<14> 2026-11-19T18:31:03.410Z maxbook rvncserver[581]: SProtoV5Up: Offering empty auth list (auth completed)
+<13> 2026-11-19T18:31:03.411Z maxbook rvncserver[581]: Connections: authenticated: user@example.com (from 192.0.2.10::50160), as user@example.com (d permissions)
+<14> 2026-11-19T18:31:03.411Z maxbook rvncserver[581]: SConn: Pixel buffer 1920x1912 at -359,-1080 depth 24
+<14> 2026-11-19T18:31:03.412Z maxbook rvncserver[581]: SConn: Server default pixel format depth 24 (32 bpp) little-endian rgb888
+<14> 2026-11-19T18:31:03.413Z maxbook rvncserver[581]: SServerRfb: Peer user agent com.realvnc.viewer.ios/4.9.6.60431 (iPad; CPU iPhone OS 27.2.1 like Mac OS X; en_US)
+<14> 2026-11-19T18:31:03.416Z maxbook rvncserver[581]: RtpPeerConnection: Received SDP media stream Offer
+<14> 2026-11-19T18:31:03.416Z maxbook rvncserver[581]: SProtoV6: Remote offer received for video media stream
+<14> 2026-11-19T18:31:03.416Z maxbook rvncserver[581]: VideoEncoderRfb: Encodings ZRLE2(24) ZRLE(16) JRLE(22) JPEG(21) TRLE(15) Zlib(6) Hextile(5) RRE(2) Raw(0) CopyRect(1)
+<14> 2026-11-19T18:31:03.416Z maxbook rvncserver[581]: VideoEncoderRfb: Current encoding ZRLE2
+<14> 2026-11-19T18:31:03.416Z maxbook rvncserver[581]: SConn: Client pixel format depth 6 (8 bpp) rgb222
+<14> 2026-11-19T18:31:03.421Z maxbook rvncserver[581]: RtpPeerConnection: Sending SDP media stream Answer
+<14> 2026-11-19T18:31:03.479Z maxbook rvncserver[581]: RtpPeerConnection: Received SDP media stream Offer
+<14> 2026-11-19T18:31:03.480Z maxbook rvncserver[581]: SProtoV6: Remote offer received for video media stream
+<14> 2026-11-19T18:31:03.480Z maxbook rvncserver[581]: VideoEncoderRfb: Encodings JRLE(22) ZRLE2(24) ZRLE(16) JPEG(21) TRLE(15) Zlib(6) Hextile(5) RRE(2) Raw(0) CopyRect(1)
+<14> 2026-11-19T18:31:03.480Z maxbook rvncserver[581]: VideoEncoderRfb: Current encoding JRLE
+<14> 2026-11-19T18:31:03.480Z maxbook rvncserver[581]: SConn: Client pixel format depth 24 (32 bpp) little-endian rgb888
+<14> 2026-11-19T18:31:03.480Z maxbook rvncserver[581]: RtpPeerConnection: Sending SDP media stream Answer
+<14> 2026-11-19T18:31:03.577Z maxbook rvncserver[581]: Agent: SServerAgent: Starting desktop
+<14> 2026-11-19T18:31:03.577Z maxbook rvncserver[581]: Agent: SServerAgent: setPixelBuffer 1920x1912 at -359,-1080 pf depth 24 (32 bpp) little-endian rgb888
+<14> 2026-11-19T18:31:03.631Z maxbook rvncserver[581]: RtpPeerConnection: Received SDP media stream Offer
+<14> 2026-11-19T18:31:03.631Z maxbook rvncserver[581]: SProtoV6: Remote offer received for video media stream
+<14> 2026-11-19T18:31:03.631Z maxbook rvncserver[581]: VideoEncoderRfb: Encodings ZRLE2(24) ZRLE(16) TRLE(15) Hextile(5) JRLE(22) JPEG(21) Zlib(6) RRE(2) Raw(0) CopyRect(1)
+<14> 2026-11-19T18:31:03.631Z maxbook rvncserver[581]: VideoEncoderRfb: Current encoding ZRLE2
+<14> 2026-11-19T18:31:03.631Z maxbook rvncserver[581]: RtpPeerConnection: Sending SDP media stream Answer
+<13> 2026-11-19T18:31:07.446Z maxbook rvncserver[581]: Connections: disconnected: user@example.com (from 192.0.2.10::50160) ([ViewerClosed] VNC Viewer closed)
+<14> 2026-11-19T18:31:07.460Z maxbook rvncserver[581]: Agent: SServerAgent: Stopping desktop

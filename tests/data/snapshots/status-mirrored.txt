@@ -1,0 +1,11 @@
+╭─ mirrormax ──────────────────────────────────────────╮
+│ ● Mirrored · VNC session active since 14:02 (23 min) │
+╰──────────────────────────────────────────────────────╯
+Session      active                                  
+Displays     ● mirrored · previous layout saved      
+Agent        ✓ watch mode · pid 812                  
+Last switch  mirrored at 14:02 · 23 min ago          
+Last check   14:24 · just now                        
+Legacy       inactive                                
+Config       /Users/max/.config/mirrormax/config.toml
+RealVNC log  /Library/Logs/rvncserver.log            

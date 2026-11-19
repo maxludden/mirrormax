@@ -1,0 +1,5 @@
+╭─ ✗ Error ──────────────────────────╮
+│ What  No mirrormax config yet      │
+│ Why   ~/.config/... doesn't exist. │
+│ Fix   Run `mirrormax init`.        │
+╰────────────────────────────────────╯

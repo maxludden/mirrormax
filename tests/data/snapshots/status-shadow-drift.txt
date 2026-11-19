@@ -1,0 +1,20 @@
+╭─ mirrormax ───────────────────────────────────────────────────╮
+│ ◐ Shadow mode · the legacy vnc-mirror agent owns the displays │
+╰───────────────────────────────────────────────────────────────╯
+Session      active                                  
+Displays     ○ normal                                
+Agent        ✓ watch mode · pid 812                  
+Last switch  mirrored at 14:02 · 23 min ago          
+Last check   14:24 · just now                        
+Legacy       ⚠ legacy agent loaded                   
+Config       /Users/max/.config/mirrormax/config.toml
+RealVNC log  /Library/Logs/rvncserver.log            
+╭─ ⚠ Shadow mode ─────────────────────────────────────────────────────────────╮
+│ mirrormax is watching but won't switch displays while vnc-mirror is active. │
+│ Last decision: Would mirror (shadow mode: legacy agent loaded)              │
+│ When you're ready: mirrormax migrate                                        │
+╰─────────────────────────────────────────────────────────────────────────────╯
+╭─ ⚠ Attention ────────────────────────────────────────────────────────────────────────────────╮
+│ Display drift: can't mirror; layout 'mirror' needs display(s) 6B26DAE3 that aren't connected │
+│ Fix: mirrormax layout list   (then: mirrormax layout save <name>)                            │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯

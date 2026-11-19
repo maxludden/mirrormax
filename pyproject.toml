@@ -1,0 +1,75 @@
+[project]
+name = "mirrormax"
+version = "0.1.0"
+description = "Mirror external displays onto the MacBook screen while a RealVNC session is active, and restore the previous layout afterwards."
+readme = "README.md"
+authors = [
+    { name = "Max Ludden", email = "maxludden@me.com" }
+]
+requires-python = ">=3.12"
+keywords = ["macos", "realvnc", "displayplacer", "display", "mirroring", "launchd", "cli"]
+classifiers = [
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+dependencies = [
+    "loguru>=0.8.0",
+    "rich>=15.0.0",
+    "typer>=0.29.2",
+]
+
+[project.scripts]
+mirrormax = "mirrormax.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF", "D", "PL", "PT"]
+ignore = [
+    "PLR0913",  # CLI commands legitimately take many options
+    "PLR2004",  # magic numbers are fine in tests and exit codes
+    "PLR0911",
+    "PLR0915",  # long but linear command bodies read better unsplit
+    "PLR0917",  # keyword-heavy constructors are clearer than parameter objects here
+    "RUF001",   # × and ★ are intentional in UI strings
+    "PLR0912",
+    "D203",
+    "D213",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D", "PLR", "S101", "PLC0415", "PT018", "SIM115"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+strict = true
+python_version = "3.12"
+platform = "darwin"  # mirrormax targets macOS (kqueue, launchd)
+files = ["src", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not macos'"
+markers = [
+    "macos: needs a real macOS kernel (kqueue); run with `pytest -m macos`",
+]
