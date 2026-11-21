@@ -18,10 +18,17 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "loguru>=0.8.0",
-    "rich>=15.0.0",
-    "typer>=0.29.2",
+    "loguru>=0.7.2",
+    "rich>=13.7.0",
+    "typer>=0.15.0",
 ]
+
+[project.urls]
+Homepage = "https://maxludden.github.io/mirrormax/"
+Documentation = "https://maxludden.github.io/mirrormax/"
+Repository = "https://github.com/maxludden/mirrormax"
+Issues = "https://github.com/maxludden/mirrormax/issues"
+Changelog = "https://maxludden.github.io/mirrormax/changelog/"
 
 [project.scripts]
 mirrormax = "mirrormax.cli:main"
@@ -34,7 +41,10 @@ build-backend = "uv_build"
 dev = [
     "mypy>=2.4.1",
     "pytest>=9.2.0",
-    "ruff>=0.17.6",
+    "ruff>=0.17.5",
+]
+docs = [
+    "zensical>=0.1.1",
 ]
 
 [tool.ruff]
@@ -65,7 +75,7 @@ convention = "google"
 strict = true
 python_version = "3.12"
 platform = "darwin"  # mirrormax targets macOS (kqueue, launchd)
-files = ["src", "tests"]
+files = ["src", "tests", "scripts"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -73,3 +83,8 @@ addopts = "-m 'not macos'"
 markers = [
     "macos: needs a real macOS kernel (kqueue); run with `pytest -m macos`",
 ]
+
+[tool.uv]
+# Mirror the user-level supply-chain policy in the project so local machines and
+# CI resolve (and `uv lock --check`) identically.
+exclude-newer = "3 days"

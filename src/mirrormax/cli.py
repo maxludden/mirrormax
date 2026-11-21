@@ -193,7 +193,7 @@ app = typer.Typer(
     pretty_exceptions_enable=False,
     add_completion=True,
     epilog="Start with [cyan]mirrormax init[/], then [cyan]mirrormax doctor[/]. "
-    "Docs: README.md in the project folder.",
+    "Docs: https://maxludden.github.io/mirrormax/",
 )
 layout_app = typer.Typer(
     help="Save, inspect and apply named display layouts.",

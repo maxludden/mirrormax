@@ -1,5 +1,11 @@
 # mirrormax
 
+[![CI](https://github.com/maxludden/mirrormax/actions/workflows/ci.yml/badge.svg)](https://github.com/maxludden/mirrormax/actions/workflows/ci.yml)
+[![Docs](https://github.com/maxludden/mirrormax/actions/workflows/docs.yml/badge.svg)](https://maxludden.github.io/mirrormax/)
+[![PyPI](https://img.shields.io/pypi/v/mirrormax)](https://pypi.org/project/mirrormax/)
+
+**Documentation: <https://maxludden.github.io/mirrormax/>**
+
 Mirror your external display onto the MacBook screen while a **RealVNC** session is active, and put your previous layout back the moment it ends.
 
 ```
@@ -200,5 +206,14 @@ uv run mypy                   # strict, src and tests
 uv run ruff check && uv run ruff format --check
 UPDATE_SNAPSHOTS=1 uv run pytest tests/test_ui_cli.py   # accept intentional UI changes
 ```
+
+Docs (built with [Zensical](https://zensical.org/), deployed to GitHub Pages by `.github/workflows/docs.yml`):
+
+```sh
+uv run --group docs zensical serve            # live preview at http://localhost:8000
+uv run python scripts/gen_cli_reference.py    # regenerate docs/reference/cli.md after CLI changes
+```
+
+Releases: bump the version, tag `vX.Y.Z`, and publish a GitHub Release; `.github/workflows/release.yml` tests, builds and uploads to PyPI via trusted publishing. See [Releasing](https://maxludden.github.io/mirrormax/development/releasing/).
 
 Layout: `detector` (log → session state), `layouts` (displayplacer args), `displays` (backend protocol + displayplacer), `state` (atomic JSON + lock), `controller` (state machine), `watcher` (kqueue), `agent` (launchd), `legacy` (shadow mode, migrate, rollback), `doctor`, `status`, `ui` (Rich theme and renderers), `jsonout`, `cli` (Typer, thin).

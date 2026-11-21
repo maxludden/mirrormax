@@ -1,0 +1,94 @@
+# Zensical configuration for the mirrormax documentation site.
+# Build:   uv run --group docs zensical build --clean
+# Preview: uv run --group docs zensical serve
+# Reference: https://zensical.org/docs/setup/basics/
+
+[project]
+site_name = "mirrormax"
+site_description = "Mirror external displays onto the MacBook screen while a RealVNC session is active, and restore the previous layout afterwards."
+site_author = "Max Ludden"
+site_url = "https://maxludden.github.io/mirrormax/"
+repo_url = "https://github.com/maxludden/mirrormax"
+repo_name = "maxludden/mirrormax"
+edit_uri = "edit/main/docs/"
+copyright = "Copyright &copy; 2026 Max Ludden"
+docs_dir = "docs"
+site_dir = "site"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Getting started" = [
+    { "Installation" = "getting-started/installation.md" },
+    { "First-time setup" = "getting-started/setup.md" },
+    { "Migrating from vnc-mirror" = "getting-started/migrating.md" },
+  ] },
+  { "User guide" = [
+    { "How it works" = "guide/how-it-works.md" },
+    { "Everyday use" = "guide/usage.md" },
+    { "Configuration and files" = "guide/configuration.md" },
+    { "Troubleshooting" = "guide/troubleshooting.md" },
+  ] },
+  { "Reference" = [
+    { "CLI reference" = "reference/cli.md" },
+    { "Exit codes and JSON" = "reference/output.md" },
+  ] },
+  { "Development" = [
+    { "Contributing" = "development/contributing.md" },
+    { "Releasing" = "development/releasing.md" },
+  ] },
+  { "Changelog" = "changelog.md" },
+]
+
+[project.theme]
+language = "en"
+icon.logo = "lucide/monitor-smartphone"
+icon.repo = "fontawesome/brands/github"
+features = [
+  "content.action.edit",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.tabs.link",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.progress",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "toc.follow",
+]
+
+# Follow the OS light/dark setting, with a manual toggle.
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "deep-purple"
+accent = "pink"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "deep-purple"
+accent = "pink"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/maxludden/mirrormax"
+name = "mirrormax on GitHub"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/python"
+link = "https://pypi.org/project/mirrormax/"
+name = "mirrormax on PyPI"

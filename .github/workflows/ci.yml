@@ -1,0 +1,47 @@
+# Lint, type-check and test on every push and pull request.
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_call: # reused by release.yml as a gate before publishing
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test (Python ${{ matrix.python-version }})
+    # mirrormax targets macOS (kqueue, launchd, displayplacer), so test there.
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: uv sync --locked --all-groups
+
+      - name: Ruff (lint)
+        run: uv run ruff check
+
+      - name: Ruff (format)
+        run: uv run ruff format --check
+
+      - name: Mypy
+        run: uv run mypy
+
+      - name: Pytest (including the real kqueue watcher)
+        run: uv run pytest -m ""
