@@ -39,7 +39,12 @@ nav = [
   { "Changelog" = "changelog.md" },
 ]
 
+# Gradient theme (zensical-gradient-theme, in the `docs` dependency group).
+# It supplies the gradient-light/gradient-dark palette with a system/light/dark
+# toggle, Inter/Roboto Mono fonts, and its own CSS/JS, so no palette or
+# extra_css is set here. `features` below replaces the theme's list wholesale.
 [project.theme]
+name = "gradient"
 language = "en"
 icon.logo = "lucide/monitor-smartphone"
 icon.repo = "fontawesome/brands/github"
@@ -51,6 +56,7 @@ features = [
   "navigation.footer",
   "navigation.indexes",
   "navigation.instant",
+  "navigation.instant.prefetch",
   "navigation.instant.progress",
   "navigation.path",
   "navigation.sections",
@@ -58,30 +64,9 @@ features = [
   "navigation.top",
   "navigation.tracking",
   "search.highlight",
+  "search.suggest",
   "toc.follow",
 ]
-
-# Follow the OS light/dark setting, with a manual toggle.
-[[project.theme.palette]]
-media = "(prefers-color-scheme)"
-toggle.icon = "lucide/sun-moon"
-toggle.name = "Switch to light mode"
-
-[[project.theme.palette]]
-media = "(prefers-color-scheme: light)"
-scheme = "default"
-primary = "deep-purple"
-accent = "pink"
-toggle.icon = "lucide/sun"
-toggle.name = "Switch to dark mode"
-
-[[project.theme.palette]]
-media = "(prefers-color-scheme: dark)"
-scheme = "slate"
-primary = "deep-purple"
-accent = "pink"
-toggle.icon = "lucide/moon"
-toggle.name = "Switch to system preference"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
