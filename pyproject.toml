@@ -45,6 +45,7 @@ dev = [
 ]
 docs = [
     "zensical>=0.1.1",
+    "zensical-gradient-theme>=0.1.1",
 ]
 
 [tool.ruff]
@@ -84,7 +85,4 @@ markers = [
     "macos: needs a real macOS kernel (kqueue); run with `pytest -m macos`",
 ]
 
-[tool.uv]
-# Mirror the user-level supply-chain policy in the project so local machines and
-# CI resolve (and `uv lock --check`) identically.
-exclude-newer = "3 days"
+
